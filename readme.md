@@ -1,136 +1,140 @@
+<!--
+  ┌─────────────────────────────────────────────────────────────┐
+  │                                                             │
+  │   GITHUB PROFILE README                                     │
+  │                                                             │
+  │   How to use:                                               │
+  │   1. Replace [Your Name] with your name                     │
+  │   2. Replace [yourusername] with your GitHub username        │
+  │   3. Replace all [bracketed] placeholders                   │
+  │   4. Update projects, tech stack, and experience            │
+  │   5. Delete any sections you don't need                     │
+  │                                                             │
+  └─────────────────────────────────────────────────────────────┘
+-->
 <div align="center">
-
-# ALEX RIVERA
-<sub>ENGINEER & DESIGNER</sub>
-
 <br>
-
-### Precision through Absence.
-
-Engineer & Designer focused on building high-performance systems and editorial-grade interfaces.
-Merging technical rigor with uncompromising aesthetics.
-
+<samp>software engineer</samp>
+<br><br>
+# [Your Name]
+*Building tools that disappear into usefulness.*
 <br>
-
-[![Email](https://img.shields.io/badge/-hello%40alexrivera.dev-000000?style=flat-square&logo=maildotru&logoColor=white)](mailto:hello@alexrivera.dev)
-[![GitHub](https://img.shields.io/badge/-GitHub-000000?style=flat-square&logo=github&logoColor=white)](#)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=white)](#)
-[![Twitter](https://img.shields.io/badge/-Twitter-000000?style=flat-square&logo=x&logoColor=white)](#)
-
 </div>
-
-<br>
-
+&nbsp;
+I think about software the way an architect thinks about space — structure should serve experience, not the other way around.
+My work lives at the intersection of engineering precision and design sensibility. I build products that are technically rigorous, visually considered, and genuinely useful to the people who rely on them.
+Currently engineering at **[Company Name]**.
+&nbsp;
 ---
-
-## Philosophy
-
-### Engineering as Craft
-
-Code is a medium of expression. Every architectural decision, every line of logic, and every typographic scale serves a unified purpose: clarity. I build systems that prioritize legibility over complexity, treating software development with the meticulous attention of print design.
-
-By eliminating the superfluous, we elevate the essential. My work spans from low-level distributed infrastructure to high-fidelity interactive canvases, always anchored by a minimalist ethos.
-
+&nbsp;
+### Principles
+&nbsp;
+Ship less, ship better.<br>
+Every abstraction should earn its place.<br>
+Code is read far more than it is written.<br>
+The best interface is the one you don't notice.<br>
+Complexity is easy — clarity is hard.
+&nbsp;
 ---
-
-## Selected Works
-
+&nbsp;
+### Selected Work
+&nbsp;
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### Nexus Router ↗
-A highly optimized, zero-allocation HTTP router for Go. Capable of handling 10M+ req/sec with minimal overhead.
-
-`Go` `Networking`
-
+**[Project Alpha](https://github.com/yourusername/project-alpha)**
+<br>
+<sub>A brief, compelling description of what this does and the problem it solves.</sub>
+<br><br>
+<sub>`TypeScript` · `React` · `PostgreSQL`</sub>
 </td>
 <td width="50%" valign="top">
-
-### Canvas Engine ↗
-WebGL-based rendering framework for interactive data visualization. Powers editorial dashboards for financial institutions.
-
-`TypeScript` `WebGL`
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### Aura Design System ↗
-A comprehensive UI library built on the principles of extreme minimalism. Includes robust token management, accessible primitive components, and a custom build pipeline.
-
-`React` `Tailwind` `Figma`
-
-</td>
-</tr>
-</table>
-
----
-
-## Stack
-
-<table>
-<tr>
-<td valign="top" width="33%">
-
-**Languages**
-- TypeScript
-- Go
-- Rust
-- Python
-
-</td>
-<td valign="top" width="33%">
-
-**Frameworks**
-- React / Next.js
-- Three.js
-- Tailwind CSS
-- gRPC
-
-</td>
-<td valign="top" width="33%">
-
-**Infrastructure**
-- Kubernetes
-- AWS
-- Terraform
-- Docker
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-![Stack icons](https://skillicons.dev/icons?i=ts,go,rust,py,react,nextjs,threejs,tailwind,graphql,kubernetes,aws,terraform,docker)
-
-</div>
-
----
-
-<div align="center">
-
-### Currently focused on developing low-latency distributed systems and refining high-fidelity digital interfaces.
-
-</div>
-
----
-
-## Connect
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/-Email-131313?style=flat-square&logo=maildotru&logoColor=white)](mailto:hello@alexrivera.dev)
-[![GitHub](https://img.shields.io/badge/-GitHub-131313?style=flat-square&logo=github&logoColor=white)](#)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-131313?style=flat-square&logo=linkedin&logoColor=white)](#)
-[![Twitter](https://img.shields.io/badge/-Twitter-131313?style=flat-square&logo=x&logoColor=white)](#)
-
-</div>
-
+**[Project Beta](https://github.com/yourusername/project-beta)**
 <br>
-
+<sub>A brief, compelling description of what this does and the problem it solves.</sub>
+<br><br>
+<sub>`Go` · `gRPC` · `Kubernetes`</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+**[Project Gamma](https://github.com/yourusername/project-gamma)**
+<br>
+<sub>A brief, compelling description of what this does and the problem it solves.</sub>
+<br><br>
+<sub>`Rust` · `WebAssembly`</sub>
+</td>
+<td width="50%" valign="top">
+**[Project Delta](https://github.com/yourusername/project-delta)**
+<br>
+<sub>A brief, compelling description of what this does and the problem it solves.</sub>
+<br><br>
+<sub>`Python` · `FastAPI` · `Redis`</sub>
+</td>
+</tr>
+</table>
+&nbsp;
+---
+&nbsp;
+### Craft
+&nbsp;
+|  |  |
+|:--|:--|
+| **Languages** | TypeScript · Go · Python · Rust |
+| **Frontend** | React · Next.js · Tailwind CSS |
+| **Backend** | Node.js · FastAPI · GraphQL |
+| **Data** | PostgreSQL · Redis · Elasticsearch |
+| **Infrastructure** | AWS · Docker · Kubernetes · Terraform |
+| **Tools** | Neovim · Figma · Linear |
+&nbsp;
+---
+&nbsp;
+### Experience
+&nbsp;
+**[Current Company]** — Senior Software Engineer
+<br>
+<sub>2023 — Present · Brief description of scope, domain, or impact.</sub>
+&nbsp;
+**[Previous Company]** — Software Engineer
+<br>
+<sub>2021 — 2023 · Brief description of scope, domain, or impact.</sub>
+&nbsp;
+**[First Company]** — Software Engineer
+<br>
+<sub>2019 — 2021 · Brief description of scope, domain, or impact.</sub>
+&nbsp;
+---
+&nbsp;
+### Now
+&nbsp;
+- Exploring **[current technology or research interest]**
+- Building **[current project or open-source work]**
+- Writing about **[topic]** at **[publication or blog]**
+&nbsp;
+---
 <div align="center">
-<sub>© 2026 PRECISION THROUGH ABSENCE. ALL RIGHTS RESERVED.</sub>
+<br>
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_border=true&bg_color=00000000&text_color=9f9f9f&title_color=9f9f9f&icon_color=4c4c4c&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_border=true&bg_color=00000000&text_color=555555&title_color=555555&icon_color=888888&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
+    media="(prefers-color-scheme: light)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_border=true&bg_color=00000000&text_color=888888&title_color=888888&icon_color=666666&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28" alt="GitHub activity overview" width="420" />
+</picture>
+<br>
+</div>
+---
+<div align="center">
+<br>
+<samp>
+<a href="mailto:you@example.com">Email</a> &nbsp;·&nbsp;
+<a href="https://yoursite.com">Site</a> &nbsp;·&nbsp;
+<a href="https://linkedin.com/in/yourusername">LinkedIn</a> &nbsp;·&nbsp;
+<a href="https://twitter.com/yourusername">Twitter</a>
+</samp>
+<br><br>
 </div>
