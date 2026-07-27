@@ -1,83 +1,74 @@
-<!--
-  ┌─────────────────────────────────────────────────────────────┐
-  │                                                             │
-  │   GITHUB PROFILE README                                     │
-  │                                                             │
-  │   How to use:                                               │
-  │   1. Replace [Your Name] with your name                     │
-  │   2. Replace [yourusername] with your GitHub username        │
-  │   3. Replace all [bracketed] placeholders                   │
-  │   4. Update projects, tech stack, and experience            │
-  │   5. Delete any sections you don't need                     │
-  │                                                             │
-  └─────────────────────────────────────────────────────────────┘
+<!-- 
+  Replace all [bracketed] placeholders with your information.
+  Replace "samir-sah" in stats URLs with your GitHub username.
 -->
 <div align="center">
-<br>
-<samp>software engineer</samp>
 <br><br>
-# [Your Name]
-*Building tools that disappear into usefulness.*
+<samp>software engineer</samp>
 <br>
+# Samir Sah
+*Building tools that disappear into usefulness.*
+<br><br>
 </div>
-&nbsp;
+---
+<br>
 I think about software the way an architect thinks about space — structure should serve experience, not the other way around.
 My work lives at the intersection of engineering precision and design sensibility. I build products that are technically rigorous, visually considered, and genuinely useful to the people who rely on them.
 Currently engineering at **[Company Name]**.
-&nbsp;
+<br>
 ---
-&nbsp;
+<br>
 ### Principles
-&nbsp;
-Ship less, ship better.<br>
-Every abstraction should earn its place.<br>
-Code is read far more than it is written.<br>
-The best interface is the one you don't notice.<br>
-Complexity is easy — clarity is hard.
-&nbsp;
+<br>
+- Ship less, ship better
+- Every abstraction should earn its place
+- Code is read far more than it is written
+- The best interface is the one you don't notice
+- Complexity is easy — clarity is hard
+<br>
 ---
-&nbsp;
+<br>
 ### Selected Work
-&nbsp;
+<br>
 <table>
 <tr>
 <td width="50%" valign="top">
-**[Project Alpha](https://github.com/yourusername/project-alpha)**
 <br>
+**[Project Alpha](https://github.com/samir-sah/project-alpha)**
 <sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<br><br>
 <sub>`TypeScript` · `React` · `PostgreSQL`</sub>
+<br><br>
 </td>
 <td width="50%" valign="top">
-**[Project Beta](https://github.com/yourusername/project-beta)**
 <br>
+**[Project Beta](https://github.com/samir-sah/project-beta)**
 <sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<br><br>
 <sub>`Go` · `gRPC` · `Kubernetes`</sub>
+<br><br>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-**[Project Gamma](https://github.com/yourusername/project-gamma)**
 <br>
+**[Project Gamma](https://github.com/samir-sah/project-gamma)**
 <sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<br><br>
 <sub>`Rust` · `WebAssembly`</sub>
+<br><br>
 </td>
 <td width="50%" valign="top">
-**[Project Delta](https://github.com/yourusername/project-delta)**
 <br>
+**[Project Delta](https://github.com/samir-sah/project-delta)**
 <sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<br><br>
 <sub>`Python` · `FastAPI` · `Redis`</sub>
+<br><br>
 </td>
 </tr>
 </table>
-&nbsp;
+<br>
 ---
-&nbsp;
+<br>
 ### Craft
-&nbsp;
+<br>
 |  |  |
 |:--|:--|
 | **Languages** | TypeScript · Go · Python · Rust |
@@ -86,55 +77,45 @@ Complexity is easy — clarity is hard.
 | **Data** | PostgreSQL · Redis · Elasticsearch |
 | **Infrastructure** | AWS · Docker · Kubernetes · Terraform |
 | **Tools** | Neovim · Figma · Linear |
-&nbsp;
+<br>
 ---
-&nbsp;
+<br>
 ### Experience
-&nbsp;
-**[Current Company]** — Senior Software Engineer
 <br>
-<sub>2023 — Present · Brief description of scope, domain, or impact.</sub>
-&nbsp;
-**[Previous Company]** — Software Engineer
+**[Current Company]** — Senior Software Engineer · *2023 — Present*
+<sub>Brief description of scope, domain, or impact.</sub>
+**[Previous Company]** — Software Engineer · *2021 — 2023*
+<sub>Brief description of scope, domain, or impact.</sub>
+**[First Company]** — Software Engineer · *2019 — 2021*
+<sub>Brief description of scope, domain, or impact.</sub>
 <br>
-<sub>2021 — 2023 · Brief description of scope, domain, or impact.</sub>
-&nbsp;
-**[First Company]** — Software Engineer
-<br>
-<sub>2019 — 2021 · Brief description of scope, domain, or impact.</sub>
-&nbsp;
 ---
-&nbsp;
+<br>
 ### Now
-&nbsp;
+<br>
 - Exploring **[current technology or research interest]**
 - Building **[current project or open-source work]**
 - Writing about **[topic]** at **[publication or blog]**
-&nbsp;
+<br>
 ---
 <div align="center">
 <br>
 <picture>
   <source
-    srcset="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_border=true&bg_color=00000000&text_color=9f9f9f&title_color=9f9f9f&icon_color=4c4c4c&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
+    srcset="https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=00000000&text_color=9f9f9f&title_color=9f9f9f&icon_color=4c4c4c&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_border=true&bg_color=00000000&text_color=555555&title_color=555555&icon_color=888888&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
+    srcset="https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=00000000&text_color=555555&title_color=555555&icon_color=888888&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
     media="(prefers-color-scheme: light)"
   />
-  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_border=true&bg_color=00000000&text_color=888888&title_color=888888&icon_color=666666&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28" alt="GitHub activity overview" width="420" />
+  <img src="https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=00000000&text_color=888888&title_color=888888&icon_color=666666&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28" alt="GitHub activity overview" width="420" />
 </picture>
-<br>
+<br><br>
 </div>
 ---
 <div align="center">
 <br>
-<samp>
-<a href="mailto:you@example.com">Email</a> &nbsp;·&nbsp;
-<a href="https://yoursite.com">Site</a> &nbsp;·&nbsp;
-<a href="https://linkedin.com/in/yourusername">LinkedIn</a> &nbsp;·&nbsp;
-<a href="https://twitter.com/yourusername">Twitter</a>
-</samp>
+<samp><a href="mailto:you@example.com">Email</a> · <a href="https://yoursite.com">Site</a> · <a href="https://linkedin.com/in/yourusername">LinkedIn</a> · <a href="https://twitter.com/yourusername">Twitter</a></samp>
 <br><br>
 </div>
