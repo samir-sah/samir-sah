@@ -1,121 +1,136 @@
-<!-- 
-  Replace all [bracketed] placeholders with your information.
-  Replace "samir-sah" in stats URLs with your GitHub username.
--->
 <div align="center">
-<br><br>
-<samp>software engineer</samp>
+
+# ALEX RIVERA
+<sub>ENGINEER & DESIGNER</sub>
+
 <br>
-# Samir Sah
-*Building tools that disappear into usefulness.*
-<br><br>
+
+### Precision through Absence.
+
+Engineer & Designer focused on building high-performance systems and editorial-grade interfaces.
+Merging technical rigor with uncompromising aesthetics.
+
+<br>
+
+[![Email](https://img.shields.io/badge/-hello%40alexrivera.dev-000000?style=flat-square&logo=maildotru&logoColor=white)](mailto:hello@alexrivera.dev)
+[![GitHub](https://img.shields.io/badge/-GitHub-000000?style=flat-square&logo=github&logoColor=white)](#)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=white)](#)
+[![Twitter](https://img.shields.io/badge/-Twitter-000000?style=flat-square&logo=x&logoColor=white)](#)
+
 </div>
+
+<br>
+
 ---
-<br>
-I think about software the way an architect thinks about space — structure should serve experience, not the other way around.
-My work lives at the intersection of engineering precision and design sensibility. I build products that are technically rigorous, visually considered, and genuinely useful to the people who rely on them.
-Currently engineering at **[Company Name]**.
-<br>
+
+## Philosophy
+
+### Engineering as Craft
+
+Code is a medium of expression. Every architectural decision, every line of logic, and every typographic scale serves a unified purpose: clarity. I build systems that prioritize legibility over complexity, treating software development with the meticulous attention of print design.
+
+By eliminating the superfluous, we elevate the essential. My work spans from low-level distributed infrastructure to high-fidelity interactive canvases, always anchored by a minimalist ethos.
+
 ---
-<br>
-### Principles
-<br>
-- Ship less, ship better
-- Every abstraction should earn its place
-- Code is read far more than it is written
-- The best interface is the one you don't notice
-- Complexity is easy — clarity is hard
-<br>
----
-<br>
-### Selected Work
-<br>
+
+## Selected Works
+
 <table>
 <tr>
 <td width="50%" valign="top">
-<br>
-**[Project Alpha](https://github.com/samir-sah/project-alpha)**
-<sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<sub>`TypeScript` · `React` · `PostgreSQL`</sub>
-<br><br>
+
+### Nexus Router ↗
+A highly optimized, zero-allocation HTTP router for Go. Capable of handling 10M+ req/sec with minimal overhead.
+
+`Go` `Networking`
+
 </td>
 <td width="50%" valign="top">
-<br>
-**[Project Beta](https://github.com/samir-sah/project-beta)**
-<sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<sub>`Go` · `gRPC` · `Kubernetes`</sub>
-<br><br>
+
+### Canvas Engine ↗
+WebGL-based rendering framework for interactive data visualization. Powers editorial dashboards for financial institutions.
+
+`TypeScript` `WebGL`
+
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-<br>
-**[Project Gamma](https://github.com/samir-sah/project-gamma)**
-<sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<sub>`Rust` · `WebAssembly`</sub>
-<br><br>
-</td>
-<td width="50%" valign="top">
-<br>
-**[Project Delta](https://github.com/samir-sah/project-delta)**
-<sub>A brief, compelling description of what this does and the problem it solves.</sub>
-<sub>`Python` · `FastAPI` · `Redis`</sub>
-<br><br>
+<td colspan="2" valign="top">
+
+### Aura Design System ↗
+A comprehensive UI library built on the principles of extreme minimalism. Includes robust token management, accessible primitive components, and a custom build pipeline.
+
+`React` `Tailwind` `Figma`
+
 </td>
 </tr>
 </table>
-<br>
+
 ---
-<br>
-### Craft
-<br>
-|  |  |
-|:--|:--|
-| **Languages** | TypeScript · Go · Python · Rust |
-| **Frontend** | React · Next.js · Tailwind CSS |
-| **Backend** | Node.js · FastAPI · GraphQL |
-| **Data** | PostgreSQL · Redis · Elasticsearch |
-| **Infrastructure** | AWS · Docker · Kubernetes · Terraform |
-| **Tools** | Neovim · Figma · Linear |
-<br>
----
-<br>
-### Experience
-<br>
-**[Current Company]** — Senior Software Engineer · *2023 — Present*
-<sub>Brief description of scope, domain, or impact.</sub>
-**[Previous Company]** — Software Engineer · *2021 — 2023*
-<sub>Brief description of scope, domain, or impact.</sub>
-**[First Company]** — Software Engineer · *2019 — 2021*
-<sub>Brief description of scope, domain, or impact.</sub>
-<br>
----
-<br>
-### Now
-<br>
-- Exploring **[current technology or research interest]**
-- Building **[current project or open-source work]**
-- Writing about **[topic]** at **[publication or blog]**
-<br>
----
+
+## Stack
+
+<table>
+<tr>
+<td valign="top" width="33%">
+
+**Languages**
+- TypeScript
+- Go
+- Rust
+- Python
+
+</td>
+<td valign="top" width="33%">
+
+**Frameworks**
+- React / Next.js
+- Three.js
+- Tailwind CSS
+- gRPC
+
+</td>
+<td valign="top" width="33%">
+
+**Infrastructure**
+- Kubernetes
+- AWS
+- Terraform
+- Docker
+
+</td>
+</tr>
+</table>
+
 <div align="center">
-<br>
-<picture>
-  <source
-    srcset="https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=00000000&text_color=9f9f9f&title_color=9f9f9f&icon_color=4c4c4c&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
-    media="(prefers-color-scheme: dark)"
-  />
-  <source
-    srcset="https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=00000000&text_color=555555&title_color=555555&icon_color=888888&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28"
-    media="(prefers-color-scheme: light)"
-  />
-  <img src="https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=00000000&text_color=888888&title_color=888888&icon_color=666666&hide_title=true&hide_rank=true&include_all_commits=true&count_private=true&line_height=28" alt="GitHub activity overview" width="420" />
-</picture>
-<br><br>
+
+![Stack icons](https://skillicons.dev/icons?i=ts,go,rust,py,react,nextjs,threejs,tailwind,graphql,kubernetes,aws,terraform,docker)
+
 </div>
+
 ---
+
 <div align="center">
+
+### Currently focused on developing low-latency distributed systems and refining high-fidelity digital interfaces.
+
+</div>
+
+---
+
+## Connect
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/-Email-131313?style=flat-square&logo=maildotru&logoColor=white)](mailto:hello@alexrivera.dev)
+[![GitHub](https://img.shields.io/badge/-GitHub-131313?style=flat-square&logo=github&logoColor=white)](#)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-131313?style=flat-square&logo=linkedin&logoColor=white)](#)
+[![Twitter](https://img.shields.io/badge/-Twitter-131313?style=flat-square&logo=x&logoColor=white)](#)
+
+</div>
+
 <br>
-<samp><a href="mailto:you@example.com">Email</a> · <a href="https://yoursite.com">Site</a> · <a href="https://linkedin.com/in/yourusername">LinkedIn</a> · <a href="https://twitter.com/yourusername">Twitter</a></samp>
-<br><br>
+
+<div align="center">
+<sub>© 2026 PRECISION THROUGH ABSENCE. ALL RIGHTS RESERVED.</sub>
 </div>
