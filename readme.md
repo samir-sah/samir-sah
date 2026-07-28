@@ -58,6 +58,44 @@ A full-stack task management app for creating, organizing, and tracking todos, w
 
 ## Stack
 
+<table>
+<tr>
+<td valign="top" width="25%">
+
+**Languages**
+- Java
+- JavaScript
+
+</td>
+<td valign="top" width="25%">
+
+**Frontend**
+- React.js / Next.js
+- Tailwind CSS
+- Bootstrap
+- HTML5 / CSS3
+
+</td>
+<td valign="top" width="25%">
+
+**Backend**
+- Node.js / Express.js
+- REST API Design
+- Mongoose
+
+</td>
+<td valign="top" width="25%">
+
+**Databases & Tools**
+- MongoDB / PostgreSQL
+- AWS (EC2)
+- Git / GitHub
+- Vercel / Postman / Linux
+
+</td>
+</tr>
+</table>
+
 <div align="center">
 
 ![Stack icons](https://skillicons.dev/icons?i=java,js,html,css,react,nextjs,tailwind,bootstrap,nodejs,express,mongodb,postgres,aws,git,github,postman,linux,vercel)
@@ -73,6 +111,16 @@ A full-stack task management app for creating, organizing, and tracking todos, w
 ![Samir's GitHub stats](https://github-stats-extended.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=131313&title_color=ffffff&text_color=c9d1d9&icon_color=c9d1d9&border_color=1f1f1f)
 
 ![Samir's GitHub streak](https://streak-stats.demolab.com/?user=samir-sah&hide_border=true&background=131313&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=c9d1d9&sideNums=ffffff&dates=8e9192)
+
+</div>
+
+---
+
+## GitHub Activity
+
+<div align="center">
+
+![Samir's GitHub contribution graph](https://ghchart.rshah.org/e2e2e2/samir-sah)
 
 </div>
 
