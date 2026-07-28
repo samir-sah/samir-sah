@@ -58,47 +58,19 @@ A full-stack task management app for creating, organizing, and tracking todos, w
 
 ## Stack
 
-<table>
-<tr>
-<td valign="top" width="25%">
+**Languages** — Java, JavaScript
+<br>
+**Frontend** — React.js, Next.js, Tailwind CSS, Bootstrap, HTML5, CSS3
+<br>
+**Backend** — Node.js, Express.js, REST API Design, Mongoose
+<br>
+**Databases & Tools** — MongoDB, PostgreSQL, AWS (EC2), Git, GitHub, Vercel, Postman, Linux
 
-**Languages**
-- Java
-- JavaScript
-
-</td>
-<td valign="top" width="25%">
-
-**Frontend**
-- React.js / Next.js
-- Tailwind CSS
-- Bootstrap
-- HTML5 / CSS3
-
-</td>
-<td valign="top" width="25%">
-
-**Backend**
-- Node.js / Express.js
-- REST API Design
-- Mongoose
-
-</td>
-<td valign="top" width="25%">
-
-**Databases & Tools**
-- MongoDB / PostgreSQL
-- AWS (EC2)
-- Git / GitHub
-- Vercel / Postman / Linux
-
-</td>
-</tr>
-</table>
+<br>
 
 <div align="center">
 
-![Stack icons](https://skillicons.dev/icons?i=java,js,html,css,react,nextjs,tailwind,bootstrap,nodejs,express,mongodb,postgres,aws,git,github,postman,linux,vercel)
+![Stack icons](https://skillicons.dev/icons?i=java,js,html,css,react,nextjs,tailwind,bootstrap,nodejs,express,mongodb,postgres,aws,git,github,postman,linux,vercel&perline=6)
 
 </div>
 
@@ -120,20 +92,6 @@ A full-stack task management app for creating, organizing, and tracking todos, w
 
 <div align="center">
 
-![Samir's GitHub contribution graph](https://ghchart.rshah.org/e2e2e2/samir-sah)
+![Samir's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=samir-sah&bg_color=131313&color=e2e2e2&line=e2e2e2&point=ffffff&area=true&area_color=e2e2e2&hide_border=true&grid=false&hide_title=true)
 
-</div>
-
----
-
-<div align="center">
-
-### Currently preparing for placement season — sharpening DSA fundamentals and shipping production-grade fullstack projects.
-
-</div>
-
-<br>
-
-<div align="center">
-<sub>© 2026 SAMIR SAH. BUILT WITH PRECISION.</sub>
 </div>
