@@ -5,8 +5,6 @@
 
 <br>
 
-### Precision through Absence.
-
 Final-year Information Science student and software engineer focused on building
 stable, production-grade systems — from RESTful APIs to clean, responsive interfaces.
 
@@ -30,16 +28,6 @@ stable, production-grade systems — from RESTful APIs to clean, responsive inte
 <sub>— John Ruskin</sub>
 
 </div>
-
----
-
-## Philosophy
-
-### Engineering as Craft
-
-Code is a medium of expression. Every schema, every endpoint, and every UI component
-serves a unified purpose: reliability without excess — from a single well-designed
-API to a full-stack dashboard shipped to production.
 
 ---
 
@@ -82,9 +70,9 @@ A full-stack task management app for creating, organizing, and tracking todos, w
 
 <div align="center">
 
-![Samir's GitHub stats](https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=131313&title_color=ffffff&text_color=c9d1d9&icon_color=c9d1d9&border_color=1f1f1f)
+![Samir's GitHub stats](https://github-stats-extended.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=131313&title_color=ffffff&text_color=c9d1d9&icon_color=c9d1d9&border_color=1f1f1f)
 
-![Samir's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=samir-sah&bg_color=131313&color=c9d1d9&line=e2e2e2&point=ffffff&area=true&hide_border=true)
+![Samir's GitHub streak](https://streak-stats.demolab.com/?user=samir-sah&hide_border=true&background=131313&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=c9d1d9&sideNums=ffffff&dates=8e9192)
 
 </div>
 
@@ -93,19 +81,6 @@ A full-stack task management app for creating, organizing, and tracking todos, w
 <div align="center">
 
 ### Currently preparing for placement season — sharpening DSA fundamentals and shipping production-grade fullstack projects.
-
-</div>
-
----
-
-## Connect
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/-Email-131313?style=flat-square&logo=gmail&logoColor=white)](mailto:sahsamir2004@gmail.com)
-[![GitHub](https://img.shields.io/badge/-GitHub-131313?style=flat-square&logo=github&logoColor=white)](https://github.com/samir-sah)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-131313?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samir-sah-68a8b3329/)
-[![LeetCode](https://img.shields.io/badge/-LeetCode-131313?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/u/Samir_Sah/)
 
 </div>
 
