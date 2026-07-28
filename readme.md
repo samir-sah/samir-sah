@@ -1,21 +1,21 @@
 <div align="center">
 
-# ALEX RIVERA
-<sub>ENGINEER & DESIGNER</sub>
+# SAMIR SAH
+<sub>SOFTWARE ENGINEER</sub>
 
 <br>
 
 ### Precision through Absence.
 
-Engineer & Designer focused on building high-performance systems and editorial-grade interfaces.
-Merging technical rigor with uncompromising aesthetics.
+Final-year Information Science student and software engineer focused on building
+stable, production-grade systems — from RESTful APIs to clean, responsive interfaces.
 
 <br>
 
-[![Email](https://img.shields.io/badge/-hello%40alexrivera.dev-000000?style=flat-square&logo=maildotru&logoColor=white)](mailto:hello@alexrivera.dev)
-[![GitHub](https://img.shields.io/badge/-GitHub-000000?style=flat-square&logo=github&logoColor=white)](#)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=white)](#)
-[![Twitter](https://img.shields.io/badge/-Twitter-000000?style=flat-square&logo=x&logoColor=white)](#)
+[![Email](https://img.shields.io/badge/-sahsamir2004%40gmail.com-000000?style=flat-square&logo=gmail&logoColor=white)](mailto:sahsamir2004@gmail.com)
+[![GitHub](https://img.shields.io/badge/-GitHub-000000?style=flat-square&logo=github&logoColor=white)](https://github.com/samir-sah)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samir-sah-68a8b3329/)
+[![LeetCode](https://img.shields.io/badge/-LeetCode-000000?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/u/Samir_Sah/)
 
 </div>
 
@@ -23,13 +23,23 @@ Merging technical rigor with uncompromising aesthetics.
 
 ---
 
+<div align="center">
+
+*"The highest reward for a man's toil is not what he gets for it but what he becomes by it."*
+<br>
+<sub>— John Ruskin</sub>
+
+</div>
+
+---
+
 ## Philosophy
 
 ### Engineering as Craft
 
-Code is a medium of expression. Every architectural decision, every line of logic, and every typographic scale serves a unified purpose: clarity. I build systems that prioritize legibility over complexity, treating software development with the meticulous attention of print design.
-
-By eliminating the superfluous, we elevate the essential. My work spans from low-level distributed infrastructure to high-fidelity interactive canvases, always anchored by a minimalist ethos.
+Code is a medium of expression. Every schema, every endpoint, and every UI component
+serves a unified purpose: reliability without excess — from a single well-designed
+API to a full-stack dashboard shipped to production.
 
 ---
 
@@ -39,28 +49,18 @@ By eliminating the superfluous, we elevate the essential. My work spans from low
 <tr>
 <td width="50%" valign="top">
 
-### Nexus Router ↗
-A highly optimized, zero-allocation HTTP router for Go. Capable of handling 10M+ req/sec with minimal overhead.
+### Business Admin Dashboard ↗
+Full-stack admin dashboard to manage business data and operations, with a structured backend and responsive frontend interface. RESTful APIs and database models support CRUD operations and consistent data flow across the system.
 
-`Go` `Networking`
+`Next.js` `Tailwind CSS` `Node.js` `Express` `MongoDB`
 
 </td>
 <td width="50%" valign="top">
 
-### Canvas Engine ↗
-WebGL-based rendering framework for interactive data visualization. Powers editorial dashboards for financial institutions.
+### Todo App ↗
+A full-stack task management app for creating, organizing, and tracking todos, with persistent storage and a clean, responsive UI built on the MERN stack.
 
-`TypeScript` `WebGL`
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### Aura Design System ↗
-A comprehensive UI library built on the principles of extreme minimalism. Includes robust token management, accessible primitive components, and a custom build pipeline.
-
-`React` `Tailwind` `Figma`
+`React` `Node.js` `Express` `MongoDB`
 
 </td>
 </tr>
@@ -70,41 +70,21 @@ A comprehensive UI library built on the principles of extreme minimalism. Includ
 
 ## Stack
 
-<table>
-<tr>
-<td valign="top" width="33%">
+<div align="center">
 
-**Languages**
-- TypeScript
-- Go
-- Rust
-- Python
+![Stack icons](https://skillicons.dev/icons?i=java,js,html,css,react,nextjs,tailwind,bootstrap,nodejs,express,mongodb,postgres,aws,git,github,postman,linux,vercel)
 
-</td>
-<td valign="top" width="33%">
+</div>
 
-**Frameworks**
-- React / Next.js
-- Three.js
-- Tailwind CSS
-- gRPC
+---
 
-</td>
-<td valign="top" width="33%">
-
-**Infrastructure**
-- Kubernetes
-- AWS
-- Terraform
-- Docker
-
-</td>
-</tr>
-</table>
+## GitHub Stats
 
 <div align="center">
 
-![Stack icons](https://skillicons.dev/icons?i=ts,go,rust,py,react,nextjs,threejs,tailwind,graphql,kubernetes,aws,terraform,docker)
+![Samir's GitHub stats](https://github-readme-stats.vercel.app/api?username=samir-sah&show_icons=true&hide_border=true&bg_color=131313&title_color=ffffff&text_color=c9d1d9&icon_color=c9d1d9&border_color=1f1f1f)
+
+![Samir's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=samir-sah&bg_color=131313&color=c9d1d9&line=e2e2e2&point=ffffff&area=true&hide_border=true)
 
 </div>
 
@@ -112,7 +92,7 @@ A comprehensive UI library built on the principles of extreme minimalism. Includ
 
 <div align="center">
 
-### Currently focused on developing low-latency distributed systems and refining high-fidelity digital interfaces.
+### Currently preparing for placement season — sharpening DSA fundamentals and shipping production-grade fullstack projects.
 
 </div>
 
@@ -122,15 +102,15 @@ A comprehensive UI library built on the principles of extreme minimalism. Includ
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/-Email-131313?style=flat-square&logo=maildotru&logoColor=white)](mailto:hello@alexrivera.dev)
-[![GitHub](https://img.shields.io/badge/-GitHub-131313?style=flat-square&logo=github&logoColor=white)](#)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-131313?style=flat-square&logo=linkedin&logoColor=white)](#)
-[![Twitter](https://img.shields.io/badge/-Twitter-131313?style=flat-square&logo=x&logoColor=white)](#)
+[![Email](https://img.shields.io/badge/-Email-131313?style=flat-square&logo=gmail&logoColor=white)](mailto:sahsamir2004@gmail.com)
+[![GitHub](https://img.shields.io/badge/-GitHub-131313?style=flat-square&logo=github&logoColor=white)](https://github.com/samir-sah)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-131313?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samir-sah-68a8b3329/)
+[![LeetCode](https://img.shields.io/badge/-LeetCode-131313?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/u/Samir_Sah/)
 
 </div>
 
 <br>
 
 <div align="center">
-<sub>© 2026 PRECISION THROUGH ABSENCE. ALL RIGHTS RESERVED.</sub>
+<sub>© 2026 SAMIR SAH. BUILT WITH PRECISION.</sub>
 </div>
