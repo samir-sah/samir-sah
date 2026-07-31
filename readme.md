@@ -25,7 +25,7 @@ stable, production-grade systems — from RESTful APIs to clean, responsive inte
 
 *"The highest reward for a man's toil is not what he gets for it but what he becomes by it."*
 <br>
-<sub>— John Ruskin</sub>
+<sub>— Ruskin</sub>
 
 </div>
 
