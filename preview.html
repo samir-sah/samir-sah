@@ -48,12 +48,8 @@
     .badge-leetcode { background: #FFA116; color: black; }
     .badge-portfolio { background: #000000; color: white; }
     hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    @media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } }
-    .project-card { border: 1px solid var(--border); border-radius: 8px; padding: 1rem; background: var(--card-bg); text-align: left; }
-    .project-card h4 { margin: 0 0 0.5rem; font-size: 1rem; }
-    .project-card p { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.9rem; }
-    .project-stats { font-size: 0.8rem; color: var(--muted); }
+    .featured-projects { max-width: 760px; margin: 0 auto; padding-left: 1.25rem; }
+    .featured-projects li { margin: 0.7rem 0; }
   </style>
 </head>
 <body>
@@ -64,7 +60,7 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/portrait-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/portrait-light.svg">
-      <img src="assets/portrait-dark.svg" width="320" alt="Samir Sah">
+      <img src="assets/portrait-dark.svg" width="250" alt="Samir Sah">
     </picture>
   </div>
 
@@ -86,16 +82,15 @@
   <ul>
     <li>Final-year Information Science student at JSSATE Bengaluru (Class of 2027)</li>
     <li>Full-stack engineer: MERN stack, Next.js, REST APIs, MongoDB, AWS EC2</li>
-    <li>200+ DSA problems solved; SSB Conference Stage (IAF/AFCAT track)</li>
-    <li>General Secretary, MUNSOC JSSATE — led 200+ member student body</li>
-    <li>CBSE Zonal Badminton representative, Mumbai Region</li>
+    <li>200+ DSA problems solved; focused on shipping thoughtful, production-ready systems</li>
+    <li>General Secretary, MUNSOC JSSATE — led a 200+ member student body</li>
   </ul>
 
   <hr>
 
   <h2>Toolbox</h2>
   <div class="center">
-    <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,mongodb,aws,git,github,tailwind,python&perline=6" alt="Toolbox">
+    <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,mongodb,aws,git,github,tailwind,python&perline=11" alt="Toolbox">
   </div>
 
   <hr>
@@ -107,14 +102,14 @@
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="assets/radar-skills-dark.svg">
           <source media="(prefers-color-scheme: light)" srcset="assets/radar-skills-light.svg">
-          <img src="assets/radar-skills-dark.svg" width="350" alt="Skill Radar">
+          <img src="assets/radar-skills-dark.svg" width="320" alt="Skill Radar">
         </picture>
       </td>
       <td class="center">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
           <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
-          <img src="assets/radar-langs-dark.svg" width="350" alt="Language Radar">
+          <img src="assets/radar-langs-dark.svg" width="320" alt="Language Radar">
         </picture>
       </td>
     </tr>
@@ -126,25 +121,14 @@
 
   <hr>
 
-  <h2>Activity</h2>
-  <table>
-    <tr>
-      <td class="center">
-        <img src="assets/metrics.svg" width="450" alt="Contribution Calendar">
-      </td>
-      <td class="center">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg">
-          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-light.svg">
-          <img src="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg" width="450" alt="Snake Contribution Graph">
-        </picture>
-      </td>
-    </tr>
-    <tr>
-      <td class="center"><sub><strong>Contribution Calendar</strong></sub></td>
-      <td class="center"><sub><strong>Snake Game</strong></sub></td>
-    </tr>
-  </table>
+  <h2>Contribution Snake</h2>
+  <div class="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-light.svg">
+      <img src="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg" width="820" alt="Snake Contribution Graph">
+    </picture>
+  </div>
 
   <hr>
 
@@ -159,67 +143,13 @@
 
   <hr>
 
-  <h2>Projects</h2>
-  <div class="project-grid">
-    <a href="https://github.com/samir-sah/business-admin-dashboard" class="project-card">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/card-project-business-admin-dashboard-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="assets/card-project-business-admin-dashboard-light.svg">
-        <img src="assets/card-project-business-admin-dashboard-dark.svg" alt="Business Admin Dashboard">
-      </picture>
-    </a>
-    <a href="https://github.com/samir-sah/crm-platform" class="project-card">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/card-project-crm-platform-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="assets/card-project-crm-platform-light.svg">
-        <img src="assets/card-project-crm-platform-dark.svg" alt="CRM Platform">
-      </picture>
-    </a>
-    <a href="https://github.com/samir-sah/mavoix-internship-dashboard" class="project-card">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/card-project-mavoix-internship-dashboard-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="assets/card-project-mavoix-internship-dashboard-light.svg">
-        <img src="assets/card-project-mavoix-internship-dashboard-dark.svg" alt="Mavoix Internship Dashboard">
-      </picture>
-    </a>
-    <a href="https://github.com/samir-sah/pulsesearch" class="project-card">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/card-project-pulsesearch-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="assets/card-project-pulsesearch-light.svg">
-        <img src="assets/card-project-pulsesearch-dark.svg" alt="PulseSearch">
-      </picture>
-    </a>
-  </div>
-
-  <sub>
-    <table>
-      <thead>
-        <tr><th>Project</th><th>Stack</th><th>Description</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="https://github.com/samir-sah/business-admin-dashboard">Business Admin Dashboard</a></td>
-          <td>Next.js, Tailwind, Node.js, Express, MongoDB</td>
-          <td>Full-stack admin dashboard with RESTful APIs and responsive UI</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/samir-sah/crm-platform">CRM Platform</a></td>
-          <td>React, Tailwind, Node.js, Express, MongoDB, JWT</td>
-          <td>Kanban-based sales pipeline with leads, contacts, and follow-ups</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/samir-sah/mavoix-internship-dashboard">Mavoix Internship Dashboard</a></td>
-          <td>Node.js, Express, MongoDB, AWS EC2, Razorpay</td>
-          <td>Production dashboard with FIFO inventory, payments, RBAC tickets</td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/samir-sah/pulsesearch">PulseSearch</a></td>
-          <td>Python, BM25</td>
-          <td>From-scratch search engine for understanding information retrieval</td>
-        </tr>
-      </tbody>
-    </table>
-  </sub>
+  <h2>Featured Projects</h2>
+  <ul class="featured-projects">
+    <li><a href="https://github.com/samir-sah/business-admin-dashboard"><strong>Business Admin Dashboard</strong></a> — Full-stack admin dashboard with RESTful APIs and a responsive Next.js/Tailwind interface.</li>
+    <li><a href="https://github.com/samir-sah/crm-platform"><strong>CRM Platform</strong></a> — Kanban-based sales pipeline for leads, contacts, notes, and follow-up tasks.</li>
+    <li><a href="https://github.com/samir-sah/mavoix-internship-dashboard"><strong>Mavoix Internship Dashboard</strong></a> — Production dashboard for FIFO inventory, Razorpay payments, and RBAC support tickets.</li>
+    <li><a href="https://github.com/samir-sah/pulsesearch"><strong>PulseSearch</strong></a> — A BM25 search engine built from the ground up to explore information retrieval.</li>
+  </ul>
 
   <hr>
   <p class="center"><sub>Generated by <a href="https://github.com/samir-sah/samir-sah">samir-sah/samir-sah</a> · Updated daily via GitHub Actions</sub></p>

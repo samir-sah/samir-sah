@@ -109,8 +109,9 @@ def normalize_to_100(values):
 
 def generate_radar_svg(axes, title, size, show_values, dark=True):
     """Generate radar chart SVG."""
-    cx = cy = size / 2
-    radius = size * 0.42
+    cx = size / 2
+    cy = size * (0.54 if title else 0.5)
+    radius = size * (0.36 if title else 0.42)
     n = len(axes)
     if n < 3:
         return ""

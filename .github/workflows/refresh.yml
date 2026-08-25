@@ -36,18 +36,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
       
-      - name: Generate cards
-        run: python scripts/cards.py --user samir-sah --out assets
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
-      
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/portrait*.svg assets/radar-skills-dark.svg assets/radar-skills-light.svg assets/radar-langs-dark.svg assets/radar-langs-light.svg assets/card-*.svg
+          git add assets/portrait*.svg assets/radar-skills-dark.svg assets/radar-skills-light.svg assets/radar-langs-dark.svg assets/radar-langs-light.svg
           if ! git diff --cached --quiet; then
-            git commit -m "chore: refresh radar charts, cards, and portrait"
+            git commit -m "chore: refresh profile assets"
             git pull --rebase origin main
             git push
           else
