@@ -1,0 +1,30 @@
+name: Snake
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate snake
+        uses: Platane/snk@master
+        with:
+          github_user_name: samir-sah
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?color_snake=58a6ff&color_bg=0d1117
+            dist/snake-light.svg?color_snake=58a6ff&color_bg=ffffff
+      - name: Push to output branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_message: "chore: update snake"
