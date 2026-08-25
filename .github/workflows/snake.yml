@@ -10,14 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate snake
+      - name: Generate snake (dark)
         uses: Platane/snk@master
         with:
           github_user_name: samir-sah
-          outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?color_snake=58a6ff&color_bg=0d1117
-            dist/snake-light.svg?color_snake=58a6ff&color_bg=ffffff
+          svg_out_path: dist/snake-dark.svg
+          color_snake: "58a6ff"
+          color_bg: "0d1117"
+      - name: Generate snake (light)
+        uses: Platane/snk@master
+        with:
+          github_user_name: samir-sah
+          svg_out_path: dist/snake-light.svg
+          color_snake: "58a6ff"
+          color_bg: "ffffff"
       - name: Push to output branch
         uses: peaceiris/actions-gh-pages@v3
         with:

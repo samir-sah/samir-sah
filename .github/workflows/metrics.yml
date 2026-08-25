@@ -24,7 +24,6 @@ jobs:
           plugin_languages_threshold: 0%
           plugin_achievements: yes
           plugin_achievements_threshold: C
-          plugin_achievements_secret: yes
           plugin_achievements_display: compact
           plugin_notable: yes
           plugin_notable_repositories: yes
@@ -38,7 +37,3 @@ jobs:
           plugin_habits_charts: yes
           output_action: commit
           filename: assets/metrics.svg
-          commit_message: "chore: update metrics"
-          committer_message: "chore: update metrics"
-          git_user: "github-actions[bot]"
-          git_email: "41898282+github-actions[bot]@users.noreply.github.com"
