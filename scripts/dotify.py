@@ -54,14 +54,11 @@ def equalize_image(img, mask=None):
     if img.mode != "RGBA":
         img = img.convert("RGBA")
     r, g, b, a = img.split()
-    y = Image.merge("L", (r, g, b)).convert("L")
+    y = Image.merge("RGB", (r, g, b)).convert("L")
     if mask:
         y = Image.composite(y, Image.new("L", y.size, 0), mask)
     y_eq = ImageOps.equalize(y, mask=mask)
-    r_eq = ImageOps.colorize(y_eq, (0, 0, 0), (255, 255, 255)).split()[0]
-    g_eq = ImageOps.colorize(y_eq, (0, 0, 0), (255, 255, 255)).split()[0]
-    b_eq = ImageOps.colorize(y_eq, (0, 0, 0), (255, 255, 255)).split()[0]
-    return Image.merge("RGBA", (r_eq, g_eq, b_eq, a))
+    return Image.merge("RGBA", (y_eq, y_eq, y_eq, a))
 
 def enhance_detail(img, factor):
     """Local contrast enhancement (unsharp mask style)."""
