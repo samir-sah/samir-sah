@@ -32,18 +32,17 @@
 
 ---
 
-### whoami
 
 - Final-year Information Science student at JSSATE Bengaluru (Class of 2027)
 - Full-stack engineer: MERN stack, Next.js, REST APIs, MongoDB, AWS EC2
 - 200+ DSA problems solved; focused on shipping thoughtful, production-ready systems
-- General Secretary, MUNSOC JSSATE — led a 200+ member student body
+- General Secretary, MUNSOC JSSATE
 
 ---
 
 ### Toolbox
 
-![Toolbox](https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,mongodb,aws,git,github,tailwind,python&perline=11)
+![Toolbox](https://skillicons.dev/icons?i=js,react,nextjs,nodejs,mongodb,aws,git,github,tailwind,python&perline=11)
 
 ---
 
@@ -102,8 +101,6 @@
 
 - **[Business Admin Dashboard](https://github.com/samir-sah/business-admin-dashboard)** — Full-stack admin dashboard with RESTful APIs and a responsive Next.js/Tailwind interface.
 - **[CRM Platform](https://github.com/samir-sah/crm-platform)** — Kanban-based sales pipeline for leads, contacts, notes, and follow-up tasks.
-- **[Mavoix Internship Dashboard](https://github.com/samir-sah/mavoix-internship-dashboard)** — Production dashboard for FIFO inventory, Razorpay payments, and RBAC support tickets.
-- **[PulseSearch](https://github.com/samir-sah/pulsesearch)** — A BM25 search engine built from the ground up to explore information retrieval.
 
 ---
 
