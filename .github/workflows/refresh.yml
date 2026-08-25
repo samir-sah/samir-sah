@@ -19,6 +19,12 @@ jobs:
       - name: Install Pillow
         run: pip install pillow
       
+      - name: Generate portrait
+        run: |
+          python scripts/dotify.py photo.png -o assets/portrait.svg --cols 88 --equalize --detail 0.5 --circle
+          python scripts/dotify.py photo.png -o assets/portrait-dark.svg --cols 88 --equalize --detail 0.5 --circle --invert
+          python scripts/dotify.py photo.png -o assets/portrait-light.svg --cols 88 --equalize --detail 0.5 --circle
+      
       - name: Generate skill radar
         run: python scripts/radar.py --data assets/skills.json -o assets/radar-skills
       
@@ -36,9 +42,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/radar-skills-dark.svg assets/radar-skills-light.svg assets/radar-langs-dark.svg assets/radar-langs-light.svg assets/card-*.svg
+          git add assets/portrait*.svg assets/radar-skills-dark.svg assets/radar-skills-light.svg assets/radar-langs-dark.svg assets/radar-langs-light.svg assets/card-*.svg
           if ! git diff --cached --quiet; then
-            git commit -m "chore: refresh radar charts and cards"
+            git commit -m "chore: refresh radar charts, cards, and portrait"
             git push
           else
             echo "No changes to commit"
