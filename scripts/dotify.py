@@ -9,18 +9,33 @@ Usage:
 """
 
 import argparse
+from html import escape
 import sys
 import math
 from pathlib import Path
 from PIL import Image, ImageOps, ImageFilter, ImageEnhance
 
+
+def positive_int(value):
+    value = int(value)
+    if value < 1:
+        raise argparse.ArgumentTypeError("must be at least 1")
+    return value
+
+
+def nonnegative_float(value):
+    value = float(value)
+    if value < 0:
+        raise argparse.ArgumentTypeError("must not be negative")
+    return value
+
 def parse_args():
     p = argparse.ArgumentParser(description="Convert photo to dot-matrix SVG")
     p.add_argument("input", help="Input image file (PNG/JPG)")
     p.add_argument("-o", "--output", required=True, help="Output SVG/TXT file")
-    p.add_argument("--cols", type=int, default=88, help="Dots across (default: 88)")
+    p.add_argument("--cols", type=positive_int, default=88, help="Dots across (default: 88)")
     p.add_argument("--equalize", action="store_true", help="Histogram equalize before sampling (required for faces)")
-    p.add_argument("--detail", type=float, default=0.5, help="Local contrast enhancement factor (default: 0.5)")
+    p.add_argument("--detail", type=nonnegative_float, default=0.5, help="Local contrast enhancement factor (default: 0.5)")
     p.add_argument("--color", action="store_true", help="Sample true color per dot (single SVG for both themes)")
     p.add_argument("--circle", action="store_true", help="Circular mask with feathered edge")
     p.add_argument("--square", action="store_true", help="Square crop (default)")
@@ -28,8 +43,8 @@ def parse_args():
     p.add_argument("--invert", action="store_true", help="Invert brightness (dark subject on light bg)")
     p.add_argument("--mode", choices=["dots", "binary", "ascii", "braille"], default="dots", help="Output mode")
     p.add_argument("--reveal", action="store_true", help="Row-by-row draw-in animation on load")
-    p.add_argument("--reveal-time", type=float, default=1.5, help="Reveal animation duration in seconds")
-    p.add_argument("--reveal-fade", type=float, default=0.3, help="Reveal fade-in duration in seconds")
+    p.add_argument("--reveal-time", type=nonnegative_float, default=1.5, help="Reveal animation duration in seconds")
+    p.add_argument("--reveal-fade", type=nonnegative_float, default=0.3, help="Reveal fade-in duration in seconds")
     p.add_argument("--reveal-dir", choices=["up", "down"], default="up", help="Reveal direction")
     p.add_argument("--animate", action="store_true", help="Slow shimmer sweep animation")
     p.add_argument("--accent", type=str, default="#58a6ff", help="Accent color for monochrome mode (default: GitHub blue)")
@@ -72,7 +87,10 @@ def crop_and_resize(img, cols, circle, focus, mask=None):
     """Crop to square/circle and resize to target grid."""
     w, h = img.size
     size = min(w, h)
-    fx, fy = map(float, focus.split(","))
+    try:
+        fx, fy = map(float, focus.split(","))
+    except ValueError as error:
+        raise ValueError("focus must contain two comma-separated numbers") from error
     fx = max(0.0, min(1.0, fx))
     fy = max(0.0, min(1.0, fy))
     left = int((w - size) * fx)
@@ -122,7 +140,7 @@ def generate_svg(grid, cols, color_mode, accent, bg, dot_shape, circle, reveal, 
     svg_parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">')
     
     if bg != "transparent":
-        svg_parts.append(f'<rect width="1000" height="1000" fill="{bg}"/>')
+        svg_parts.append(f'<rect width="1000" height="1000" fill="{escape(bg, quote=True)}"/>')
     
     if circle:
         svg_parts.append('<defs><mask id="circleMask"><circle cx="500" cy="500" r="500" fill="white"/></mask></defs>')
@@ -158,7 +176,7 @@ def generate_svg(grid, cols, color_mode, accent, bg, dot_shape, circle, reveal, 
                 continue
             cx = x * cell_size + cell_size / 2
             cy = y * cell_size + cell_size / 2
-            fill = f"rgb{color}" if color_mode and color else accent
+            fill = f"rgb{color}" if color_mode and color else escape(accent, quote=True)
             if dot_shape == "circle":
                 svg_parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="{fill}"/>')
             else:
@@ -170,7 +188,9 @@ def generate_svg(grid, cols, color_mode, accent, bg, dot_shape, circle, reveal, 
         svg_parts.append('</g>')
     svg_parts.append('</svg>')
     
-    Path(output_path).write_text(''.join(svg_parts), encoding="utf-8")
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(''.join(svg_parts), encoding="utf-8")
 
 def generate_text(grid, cols, mode, invert, output_path):
     """Generate ASCII/braille/binary text output."""
@@ -194,7 +214,9 @@ def generate_text(grid, cols, mode, invert, output_path):
             idx = int(brightness * (len(ramp) - 1))
             line.append(ramp[idx])
         lines.append("".join(line))
-    Path(output_path).write_text("\n".join(lines), encoding="utf-8")
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines), encoding="utf-8")
 
 def main():
     args = parse_args()

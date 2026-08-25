@@ -5,14 +5,17 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
 jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
           user: samir-sah
           template: classic
           config_timezone: Asia/Kolkata

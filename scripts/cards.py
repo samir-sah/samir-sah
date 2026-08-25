@@ -8,6 +8,7 @@ Usage:
 """
 
 import argparse
+from html import escape
 import json
 import os
 import sys
@@ -35,6 +36,10 @@ LANG_COLORS = {
     "Kotlin": "#A97BFF", "Dart": "#00B4AB", "Scala": "#c22d40",
 }
 
+
+def svg_text(value):
+    return escape(str(value), quote=False)
+
 def parse_args():
     p = argparse.ArgumentParser(description="Generate stat and project card SVGs")
     p.add_argument("--user", required=True, help="GitHub username")
@@ -49,7 +54,7 @@ def fetch_json(url, token=None):
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             return json.load(resp)
-    except urllib.error.HTTPError as e:
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
         print(f"Error fetching {url}: {e}", file=sys.stderr)
         return None
 
@@ -84,7 +89,6 @@ def fetch_user_stats(username, token):
     top_lang = max(lang_bytes.items(), key=lambda x: x[1])[0] if lang_bytes else "—"
     
     contributions = None
-    streak = None
     if token:
         try:
             query = """
@@ -113,10 +117,9 @@ def fetch_user_stats(username, token):
                 result = json.load(resp)
             if "data" in result and result["data"]["user"]:
                 cc = result["data"]["user"]["contributionsCollection"]
-                contributions = cc.get("totalCommitContributions")
-                streak = cc.get("contributionCalendar", {}).get("totalContributions")
-        except Exception:
-            pass
+                contributions = cc.get("contributionCalendar", {}).get("totalContributions")
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError, KeyError, TypeError) as e:
+            print(f"Could not fetch contribution count: {e}", file=sys.stderr)
     
     return {
         "public_repos": user.get("public_repos", 0),
@@ -126,7 +129,6 @@ def fetch_user_stats(username, token):
         "total_forks": total_forks,
         "top_language": top_lang,
         "contributions": contributions,
-        "streak": streak,
     }
 
 def fetch_repo_details(username, repo_name, token):
@@ -168,7 +170,7 @@ def generate_stat_card(stats, token, dark=True):
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {card_w} {card_h}" width="{card_w}" height="{card_h}">')
     svg.append(f'<rect width="{card_w}" height="{card_h}" rx="8" fill="{bg}" stroke="{border}" stroke-width="1"/>')
     
-    col_w = card_w / cols
+    col_w = (card_w - 24) / cols
     for i, (label, value, icon) in enumerate(stat_items):
         x = 12 + i * col_w
         col_center = x + col_w / 2
@@ -205,7 +207,7 @@ def generate_project_card(repo_data, description, dark=True):
         try:
             dt = datetime.fromisoformat(updated.replace("Z", "+00:00"))
             updated_str = dt.strftime("%b %Y")
-        except:
+        except (TypeError, ValueError):
             updated_str = ""
     else:
         updated_str = ""
@@ -216,12 +218,12 @@ def generate_project_card(repo_data, description, dark=True):
     svg.append(f'<rect x="0" y="0" width="4" height="{card_h}" rx="8" ry="0" fill="{accent}"/>')
     
     # Title
-    svg.append(f'<text x="16" y="28" font-size="16" fill="{text}" font-family="system-ui, sans-serif" font-weight="600">{name}</text>')
+    svg.append(f'<text x="16" y="28" font-size="16" fill="{text}" font-family="system-ui, sans-serif" font-weight="600">{svg_text(name)}</text>')
     
     # Description
     desc_lines = wrap_text(description, 48)
     for j, line in enumerate(desc_lines[:3]):
-        svg.append(f'<text x="16" y="{48 + j * 18}" font-size="12" fill="{muted}" font-family="system-ui, sans-serif">{line}</text>')
+        svg.append(f'<text x="16" y="{48 + j * 18}" font-size="12" fill="{muted}" font-family="system-ui, sans-serif">{svg_text(line)}</text>')
     
     # Stats row
     y_stats = 130
@@ -231,21 +233,21 @@ def generate_project_card(repo_data, description, dark=True):
     # Language dot
     dot_x = card_w - 80
     svg.append(f'<circle cx="{dot_x}" cy="{y_stats - 4}" r="5" fill="{lang_color}"/>')
-    svg.append(f'<text x="{dot_x + 10}" y="{y_stats}" font-size="11" fill="{muted}" font-family="system-ui, sans-serif">{lang}</text>')
+    svg.append(f'<text x="{dot_x + 10}" y="{y_stats}" font-size="11" fill="{muted}" font-family="system-ui, sans-serif">{svg_text(lang)}</text>')
     
     if updated_str:
-        svg.append(f'<text x="{card_w - 16}" y="{card_h - 12}" text-anchor="end" font-size="10" fill="{muted}" font-family="system-ui, sans-serif">Updated {updated_str}</text>')
+        svg.append(f'<text x="{card_w - 16}" y="{card_h - 12}" text-anchor="end" font-size="10" fill="{muted}" font-family="system-ui, sans-serif">Updated {svg_text(updated_str)}</text>')
     
     svg.append('</svg>')
     return "".join(svg)
 
 def wrap_text(text, max_chars):
-    words = text.split()
+    words = str(text).split()
     lines = []
     current = []
     current_len = 0
     for word in words:
-        if current_len + len(word) + 1 > max_chars:
+        if current and current_len + len(word) + 1 > max_chars:
             lines.append(" ".join(current))
             current = [word]
             current_len = len(word)
@@ -275,7 +277,8 @@ def main():
         (out_dir / f"card-stats-{suffix}.svg").write_text(svg, encoding="utf-8")
     
     # Project cards
-    with open("assets/projects.json") as f:
+    projects_path = Path(__file__).resolve().parent.parent / "assets" / "projects.json"
+    with projects_path.open(encoding="utf-8") as f:
         projects = json.load(f)["projects"]
     
     for proj in projects[:4]:

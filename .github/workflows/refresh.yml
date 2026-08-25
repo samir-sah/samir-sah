@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
           python-version: "3.11"
       
       - name: Install Pillow
-        run: pip install pillow
+        run: python -m pip install --disable-pip-version-check pillow
       
       - name: Generate portrait
         run: |

@@ -8,6 +8,7 @@ Usage:
 """
 
 import argparse
+from html import escape
 import json
 import math
 import os
@@ -28,17 +29,28 @@ ACCENT = "#58a6ff"
 ACCENT_FILL_DARK = "rgba(88, 166, 255, 0.25)"
 ACCENT_FILL_LIGHT = "rgba(88, 166, 255, 0.15)"
 
+
+def positive_int(value):
+    value = int(value)
+    if value < 1:
+        raise argparse.ArgumentTypeError("must be at least 1")
+    return value
+
+
+def svg_text(value):
+    return escape(str(value), quote=False)
+
 def parse_args():
     p = argparse.ArgumentParser(description="Generate radar chart SVGs")
     p.add_argument("--data", help="Path to skills.json for self-rated radar")
     p.add_argument("--github", help="GitHub username for language radar")
     p.add_argument("-o", "--output", required=True, help="Output base path (will write -dark.svg and -light.svg)")
-    p.add_argument("--limit", type=int, default=7, help="Max languages to show (language radar)")
+    p.add_argument("--limit", type=positive_int, default=7, help="Max languages to show (language radar)")
     p.add_argument("--values", action="store_true", help="Show values at each axis")
     p.add_argument("--curve", type=float, default=0.4, help="Power curve for language bytes (0.3-0.5)")
     p.add_argument("--exclude", type=str, default="", help="Comma-separated languages to exclude")
     p.add_argument("--title", type=str, default="", help="Override chart title")
-    p.add_argument("--size", type=int, default=400, help="SVG size (width/height)")
+    p.add_argument("--size", type=positive_int, default=400, help="SVG size (width/height)")
     return p.parse_args()
 
 def fetch_github_languages(username):
@@ -57,8 +69,8 @@ def fetch_github_languages(username):
         try:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 repos = json.load(resp)
-        except urllib.error.HTTPError as e:
-            print(f"Error fetching repos: {e}", file=sys.stderr)
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+            print(f"Error fetching repositories: {e}", file=sys.stderr)
             break
         if not repos:
             break
@@ -74,8 +86,8 @@ def fetch_github_languages(username):
                     langs = json.load(resp)
                 for lang, bytes_count in langs.items():
                     all_langs[lang] = all_langs.get(lang, 0) + bytes_count
-            except urllib.error.HTTPError:
-                pass
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+                print(f"Error fetching languages for {repo.get('name', 'repository')}: {e}", file=sys.stderr)
         page += 1
         if page > 10:
             break
@@ -86,11 +98,13 @@ def apply_curve(values, curve):
     if curve <= 0 or curve >= 1:
         return values
     max_v = max(values.values()) if values else 1
+    max_v = max_v or 1
     return {k: (v / max_v) ** curve * 100 for k, v in values.items()}
 
 def normalize_to_100(values):
     """Scale values so max is 100."""
     max_v = max(values.values()) if values else 1
+    max_v = max_v or 1
     return {k: (v / max_v) * 100 for k, v in values.items()}
 
 def generate_radar_svg(axes, title, size, show_values, dark=True):
@@ -157,7 +171,7 @@ def generate_radar_svg(axes, title, size, show_values, dark=True):
             anchor = "start"
         elif dx < -0.3:
             anchor = "end"
-        svg.append(f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" dominant-baseline="middle" font-size="{size*0.035}" fill="{text_color}" font-family="system-ui, sans-serif">{axis["label"]}</text>')
+        svg.append(f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" dominant-baseline="middle" font-size="{size*0.035}" fill="{text_color}" font-family="system-ui, sans-serif">{svg_text(axis["label"])}</text>')
     
     # Values at axes
     if show_values:
@@ -170,7 +184,7 @@ def generate_radar_svg(axes, title, size, show_values, dark=True):
     
     # Title
     if title:
-        svg.append(f'<text x="{cx}" y="{size*0.06}" text-anchor="middle" font-size="{size*0.05}" fill="{text_color}" font-family="system-ui, sans-serif" font-weight="600">{title}</text>')
+        svg.append(f'<text x="{cx}" y="{size*0.06}" text-anchor="middle" font-size="{size*0.05}" fill="{text_color}" font-family="system-ui, sans-serif" font-weight="600">{svg_text(title)}</text>')
     
     svg.append('</svg>')
     return "".join(svg)
@@ -182,6 +196,17 @@ def main():
         with open(args.data) as f:
             data = json.load(f)
         axes = data["axes"]
+        try:
+            axes = [
+                {"label": str(axis["label"]), "value": float(axis["value"])}
+                for axis in axes
+            ]
+        except (KeyError, TypeError, ValueError):
+            print("Each radar axis must include a label and numeric value", file=sys.stderr)
+            sys.exit(1)
+        if any(not 0 <= axis["value"] <= 100 for axis in axes):
+            print("Radar values must be between 0 and 100", file=sys.stderr)
+            sys.exit(1)
         title = args.title or data.get("title", "Skill Radar")
     elif args.github:
         print(f"Fetching language stats for {args.github}...", file=sys.stderr)
@@ -199,12 +224,18 @@ def main():
     else:
         print("Either --data or --github required", file=sys.stderr)
         sys.exit(1)
+
+    if len(axes) < 3:
+        print("Radar charts require at least three axes", file=sys.stderr)
+        sys.exit(1)
     
     dark_svg = generate_radar_svg(axes, title, args.size, args.values, dark=True)
     light_svg = generate_radar_svg(axes, title, args.size, args.values, dark=False)
     
-    Path(f"{args.output}-dark.svg").write_text(dark_svg, encoding="utf-8")
-    Path(f"{args.output}-light.svg").write_text(light_svg, encoding="utf-8")
+    output_path = Path(args.output)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.with_name(f"{output_path.name}-dark.svg").write_text(dark_svg, encoding="utf-8")
+    output_path.with_name(f"{output_path.name}-light.svg").write_text(light_svg, encoding="utf-8")
     print(f"Generated {args.output}-dark.svg and {args.output}-light.svg")
 
 if __name__ == "__main__":
