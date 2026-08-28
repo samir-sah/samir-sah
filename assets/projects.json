@@ -1,8 +1,20 @@
 {
   "projects": [
-    { "repo": "samir-sah/business-admin-dashboard", "description": "A full-stack admin dashboard to manage business data and operations, with structured RESTful APIs and a responsive Next.js/Tailwind frontend." },
-    { "repo": "samir-sah/crm-platform", "description": "A full-stack CRM platform for managing leads, contacts, notes, and follow-up tasks through a Kanban-based sales pipeline with JWT authentication." },
-    { "repo": "samir-sah/mavoix-internship-dashboard", "description": "Production admin dashboard from internship — FIFO inventory, Razorpay payments, and RBAC support-ticket system on Node/Express/MongoDB deployed to AWS EC2." },
-    { "repo": "samir-sah/pulsesearch", "description": "A BM25 search engine built from the ground up to understand information retrieval rather than just call an API for it." }
+    {
+      "repo": "samir-sah/business-admin-dashboard",
+      "description": "A full-stack admin dashboard to manage business data and operations, with structured RESTful APIs and a responsive Next.js/Tailwind frontend."
+    },
+    {
+      "repo": "samir-sah/crm-platform",
+      "description": "A full-stack CRM platform for managing leads, contacts, notes, and follow-up tasks through a Kanban-based sales pipeline with JWT authentication."
+    },
+    {
+      "repo": "samir-sah/mavoix-internship-dashboard",
+      "description": "Production admin dashboard from internship — FIFO inventory, Razorpay payments, and RBAC support-ticket system on Node/Express/MongoDB deployed to AWS EC2."
+    },
+    {
+      "repo": "samir-sah/pulsesearch",
+      "description": "A BM25 search engine built from the ground up to understand information retrieval rather than just call an API for it."
+    }
   ]
 }

@@ -1,107 +1,56 @@
-<div align="center">
-
-# Samir Sah
-
-**Final-year B.E. Information Science Engineering student, JSSATE Bengaluru — graduating May 2027**
-
-</div>
-
-<div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/portrait-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/portrait-light.svg">
-  <img src="assets/portrait-dark.svg" width="250" alt="Samir Sah">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img src="assets/hero-light.svg" width="960" alt="Samir Sah — full-stack engineering, APIs, and product systems">
 </picture>
-</div>
 
-<div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2600&pause=900&center=true&width=600&lines=Building+scalable+full-stack+apps;MERN+%7C+Next.js+%7C+AWS+%7C+DSA;Always+learning%2C+always+shipping" alt="Typing banner">
-</div>
+## Engineering focus
 
-<div align="center">
+I build full-stack product systems with **MERN and Next.js**, with particular attention to **REST APIs**, durable data models in **MongoDB**, and deployment on **AWS EC2**.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/samir-sah-68a8b3329)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sahsamir2004@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/samir-sah)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/samir-sah)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://samir-sah.vercel.app)
+I am pursuing a **B.E. in Information Science Engineering at JSSATE Bengaluru**, graduating in **May 2027**. Alongside engineering, I serve as **General Secretary of MUNSOC JSSATE** and have solved **200+ DSA problems**.
 
-![Profile Views](https://komarev.com/ghpvc/?username=samir-sah&color=58a6ff&style=for-the-badge)
+## Focused toolbox
 
-</div>
+| Layer              | Tools                         |
+| ------------------ | ----------------------------- |
+| Product interfaces | Next.js · React               |
+| Application layer  | Node.js · Express · REST APIs |
+| Data               | MongoDB                       |
+| Delivery           | AWS EC2 · Git · GitHub        |
 
----
+## Currently building
 
+- Full-stack products where interface, API, and data model evolve as one system.
+- Clear REST APIs backed by MongoDB and deployed on AWS EC2.
+- Stronger problem-solving foundations through continued DSA practice.
 
-- Final-year Information Science student at JSSATE Bengaluru (Class of 2027)
-- Full-stack engineer: MERN stack, Next.js, REST APIs, MongoDB, AWS EC2
-- 200+ DSA problems solved; focused on shipping thoughtful, production-ready systems
-- General Secretary, MUNSOC JSSATE
+## Selected projects
 
----
+> The repositories listed in the local project catalogue were not publicly reachable when this profile was refreshed, so the work is presented without fragile repository links or invented metrics.
 
-### Toolbox
+### Business Admin Dashboard
 
-![Toolbox](https://skillicons.dev/icons?i=js,react,nextjs,nodejs,mongodb,aws,git,github,tailwind,python&perline=11)
+A full-stack admin dashboard for business data and operations, with structured RESTful APIs and a responsive Next.js/Tailwind frontend.
 
----
+### CRM Platform
 
-### Radars
+A full-stack CRM for leads, contacts, notes, and follow-up tasks, organized around a Kanban-based sales pipeline with JWT authentication.
 
-<table>
-<tr>
-<td align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-skills-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-skills-light.svg">
-  <img src="assets/radar-skills-dark.svg" width="320" alt="Skill Radar">
-</picture>
-</td>
-<td align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
-  <img src="assets/radar-langs-dark.svg" width="320" alt="Language Radar">
-</picture>
-</td>
-</tr>
-<tr>
-<td align="center"><sub><strong>Self-rated Skills</strong></sub></td>
-<td align="center"><sub><strong>GitHub Language Stats</strong></sub></td>
-</tr>
-</table>
+### Mavoix Internship Dashboard
 
----
+An internship admin dashboard covering FIFO inventory, Razorpay payments, and an RBAC support-ticket system using Node, Express, MongoDB, and AWS EC2.
 
-### Contribution Snake
+### PulseSearch
 
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-light.svg">
-  <img src="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg" width="820" alt="Snake Contribution Graph">
-</picture>
-</div>
+A BM25 search engine built from the ground up to explore how information retrieval works rather than only calling an API.
 
----
+## Activity
 
-### Stats
+My public GitHub profile is the source of truth for current repositories and contribution activity. No counters or generated scorecards here—just the work as it evolves.
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
-    <img src="assets/card-stats-dark.svg" alt="GitHub Stats">
-  </picture>
-</div>
+[View GitHub profile →](https://github.com/samir-sah)
 
----
+## Connect
 
-### Featured Projects
-
-- **[Business Admin Dashboard](https://github.com/samir-sah/business-admin-dashboard)** — Full-stack admin dashboard with RESTful APIs and a responsive Next.js/Tailwind interface.
-- **[CRM Platform](https://github.com/samir-sah/crm-platform)** — Kanban-based sales pipeline for leads, contacts, notes, and follow-up tasks.
-
----
-
-<sub>Generated by <a href="https://github.com/samir-sah/samir-sah">samir-sah/samir-sah</a> · Updated daily via GitHub Actions</sub>
+[Portfolio](https://samir-sah.vercel.app) · [LinkedIn](https://linkedin.com/in/samir-sah-68a8b3329) · [LeetCode](https://leetcode.com/samir-sah) · [Email](mailto:sahsamir2004@gmail.com)

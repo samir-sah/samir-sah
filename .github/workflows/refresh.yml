@@ -1,50 +1,56 @@
-name: Refresh
+name: Refresh profile hero
+
 on:
-  schedule:
-    - cron: "0 2 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - photo.png
+      - scripts/hero.py
+      - .github/workflows/refresh.yml
+
 permissions:
   contents: write
+
 concurrency:
-  group: profile-assets
-  cancel-in-progress: false
+  group: profile-hero-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   refresh:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      
+      - name: Check out repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      
-      - name: Install Pillow
-        run: python -m pip install --disable-pip-version-check pillow
-      
-      - name: Generate portrait
+          python-version: "3.12"
+
+      - name: Generate theme-aware hero
+        run: python scripts/hero.py photo.png --out assets
+
+      - name: Validate generated SVG
         run: |
-          python scripts/dotify.py photo.png -o assets/portrait.svg --cols 88 --equalize --detail 0.5 --circle
-          python scripts/dotify.py photo.png -o assets/portrait-dark.svg --cols 88 --equalize --detail 0.5 --circle --invert
-          python scripts/dotify.py photo.png -o assets/portrait-light.svg --cols 88 --equalize --detail 0.5 --circle
-      
-      - name: Generate skill radar
-        run: python scripts/radar.py --data assets/skills.json -o assets/radar-skills
-      
-      - name: Generate language radar
-        run: python scripts/radar.py --github samir-sah -o assets/radar-langs --limit 7 --values --curve 0.4 --exclude "shell,html,css,dockerfile,makefile,batchfile,procfile"
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
-      
-      - name: Commit changes
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          for path in (Path('assets/hero-light.svg'), Path('assets/hero-dark.svg')):
+              ET.parse(path)
+              print(f'validated {path}')
+          PY
+
+      - name: Commit changed assets
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/portrait*.svg assets/radar-skills-dark.svg assets/radar-skills-light.svg assets/radar-langs-dark.svg assets/radar-langs-light.svg
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: refresh profile assets"
-            git pull --rebase origin main
-            git push
-          else
-            echo "No changes to commit"
+          git add assets/hero-light.svg assets/hero-dark.svg
+          if git diff --cached --quiet; then
+            echo 'Hero assets are already current.'
+            exit 0
           fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: refresh profile hero'
+          git push

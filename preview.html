@@ -1,157 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Preview - Samir Sah</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #24292f;
-      --border: #d0d7de;
-      --muted: #656d76;
-      --accent: #58a6ff;
-      --card-bg: #f6f8fa;
-    }
-    @media (prefers-color-scheme: dark) {
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Samir Sah · GitHub profile preview</title>
+    <style>
       :root {
-        --bg: #0d1117;
-        --text: #e6edf3;
-        --border: #30363d;
-        --muted: #8b949e;
-        --accent: #79c0ff;
-        --card-bg: #161b22;
+        color-scheme: light dark;
+        --bg: #fff;
+        --panel: #f6f8fa;
+        --text: #1f2328;
+        --muted: #656d76;
+        --line: #d0d7de;
+        --link: #0969da;
       }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      padding: 2rem;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      max-width: 960px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    .center { text-align: center; }
-    img, svg { max-width: 100%; height: auto; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    td, th { padding: 0.5rem; vertical-align: top; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    sub { color: var(--muted); font-size: 0.85rem; }
-    .badge { display: inline-block; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600; margin: 0.25rem; }
-    .badge-linkedin { background: #0A66C2; color: white; }
-    .badge-email { background: #D14836; color: white; }
-    .badge-github { background: #181717; color: white; }
-    .badge-leetcode { background: #FFA116; color: black; }
-    .badge-portfolio { background: #000000; color: white; }
-    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-    .featured-projects { max-width: 760px; margin: 0 auto; padding-left: 1.25rem; }
-    .featured-projects li { margin: 0.7rem 0; }
-  </style>
-</head>
-<body>
-  <div class="center">
-    <h1>Samir Sah</h1>
-    <p><strong>Final-year B.E. Information Science Engineering student, JSSATE Bengaluru — graduating May 2027</strong></p>
-    
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/portrait-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/portrait-light.svg">
-      <img src="assets/portrait-dark.svg" width="250" alt="Samir Sah">
-    </picture>
-  </div>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1117;
+          --panel: #161b22;
+          --text: #f0f6fc;
+          --muted: #8b949e;
+          --line: #30363d;
+          --link: #58a6ff;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--panel);
+        color: var(--text);
+        font:
+          16px/1.6 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      main {
+        width: min(960px, calc(100% - 32px));
+        margin: 32px auto;
+        padding: 40px;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      h2 {
+        margin: 36px 0 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--line);
+        font-size: 1.5rem;
+      }
+      h3 {
+        margin: 22px 0 4px;
+        font-size: 1.05rem;
+      }
+      p {
+        margin: 8px 0 16px;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 9px 12px;
+        border: 1px solid var(--line);
+        text-align: left;
+      }
+      th {
+        background: var(--panel);
+      }
+      .notice {
+        padding: 12px 16px;
+        border-left: 3px solid var(--link);
+        background: var(--panel);
+        color: var(--muted);
+      }
+      .preview-note {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+      @media (max-width: 640px) {
+        main {
+          width: 100%;
+          margin: 0;
+          padding: 20px;
+          border: 0;
+          border-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="preview-note">
+        Local preview · follows your operating-system light/dark preference
+      </p>
+      <picture>
+        <source
+          media="(prefers-color-scheme: dark)"
+          srcset="assets/hero-dark.svg"
+        />
+        <source
+          media="(prefers-color-scheme: light)"
+          srcset="assets/hero-light.svg"
+        />
+        <img
+          src="assets/hero-light.svg"
+          alt="Samir Sah — full-stack engineering, APIs, and product systems"
+        />
+      </picture>
 
-  <div class="center">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2600&pause=900&center=true&width=600&lines=Building+scalable+full-stack+apps;MERN+%7C+Next.js+%7C+AWS+%7C+DSA;Always+learning%2C+always+shipping" alt="Typing banner">
-  </div>
+      <h2>Engineering focus</h2>
+      <p>
+        I build full-stack product systems with
+        <strong>MERN and Next.js</strong>, with particular attention to
+        <strong>REST APIs</strong>, durable data models in
+        <strong>MongoDB</strong>, and deployment on <strong>AWS EC2</strong>.
+      </p>
+      <p>
+        I am pursuing a
+        <strong
+          >B.E. in Information Science Engineering at JSSATE Bengaluru</strong
+        >, graduating in <strong>May 2027</strong>. Alongside engineering, I
+        serve as <strong>General Secretary of MUNSOC JSSATE</strong> and have
+        solved <strong>200+ DSA problems</strong>.
+      </p>
 
-  <div class="center">
-    <a href="https://linkedin.com/in/samir-sah-68a8b3329" class="badge badge-linkedin">LinkedIn</a>
-    <a href="mailto:sahsamir2004@gmail.com" class="badge badge-email">Email</a>
-    <a href="https://github.com/samir-sah" class="badge badge-github">GitHub</a>
-    <a href="https://leetcode.com/samir-sah" class="badge badge-leetcode">LeetCode</a>
-    <a href="https://samir-sah.vercel.app" class="badge badge-portfolio">Portfolio</a>
-  </div>
+      <h2>Focused toolbox</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Layer</th>
+            <th>Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product interfaces</td>
+            <td>Next.js · React</td>
+          </tr>
+          <tr>
+            <td>Application layer</td>
+            <td>Node.js · Express · REST APIs</td>
+          </tr>
+          <tr>
+            <td>Data</td>
+            <td>MongoDB</td>
+          </tr>
+          <tr>
+            <td>Delivery</td>
+            <td>AWS EC2 · Git · GitHub</td>
+          </tr>
+        </tbody>
+      </table>
 
-  <hr>
+      <h2>Currently building</h2>
+      <ul>
+        <li>
+          Full-stack products where interface, API, and data model evolve as one
+          system.
+        </li>
+        <li>Clear REST APIs backed by MongoDB and deployed on AWS EC2.</li>
+        <li>
+          Stronger problem-solving foundations through continued DSA practice.
+        </li>
+      </ul>
 
-  <h2>whoami</h2>
-  <ul>
-    <li>Final-year Information Science student at JSSATE Bengaluru (Class of 2027)</li>
-    <li>Full-stack engineer: MERN stack, Next.js, REST APIs, MongoDB, AWS EC2</li>
-    <li>200+ DSA problems solved; focused on shipping thoughtful, production-ready systems</li>
-    <li>General Secretary, MUNSOC JSSATE — led a 200+ member student body</li>
-  </ul>
+      <h2>Selected projects</h2>
+      <p class="notice">
+        The repositories in the local project catalogue were not publicly
+        reachable during validation; project links and unverified metrics are
+        intentionally omitted.
+      </p>
+      <h3>Business Admin Dashboard</h3>
+      <p>
+        A full-stack admin dashboard for business data and operations, with
+        structured RESTful APIs and a responsive Next.js/Tailwind frontend.
+      </p>
+      <h3>CRM Platform</h3>
+      <p>
+        A full-stack CRM for leads, contacts, notes, and follow-up tasks,
+        organized around a Kanban-based sales pipeline with JWT authentication.
+      </p>
+      <h3>Mavoix Internship Dashboard</h3>
+      <p>
+        An internship admin dashboard covering FIFO inventory, Razorpay
+        payments, and an RBAC support-ticket system using Node, Express,
+        MongoDB, and AWS EC2.
+      </p>
+      <h3>PulseSearch</h3>
+      <p>
+        A BM25 search engine built from the ground up to explore how information
+        retrieval works rather than only calling an API.
+      </p>
 
-  <hr>
+      <h2>Activity</h2>
+      <p>
+        My public GitHub profile is the source of truth for current repositories
+        and contribution activity. No counters or generated scorecards here—just
+        the work as it evolves.
+      </p>
+      <p><a href="https://github.com/samir-sah">View GitHub profile →</a></p>
 
-  <h2>Toolbox</h2>
-  <div class="center">
-    <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,mongodb,aws,git,github,tailwind,python&perline=11" alt="Toolbox">
-  </div>
-
-  <hr>
-
-  <h2>Radars</h2>
-  <table>
-    <tr>
-      <td class="center">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/radar-skills-dark.svg">
-          <source media="(prefers-color-scheme: light)" srcset="assets/radar-skills-light.svg">
-          <img src="assets/radar-skills-dark.svg" width="320" alt="Skill Radar">
-        </picture>
-      </td>
-      <td class="center">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
-          <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
-          <img src="assets/radar-langs-dark.svg" width="320" alt="Language Radar">
-        </picture>
-      </td>
-    </tr>
-    <tr>
-      <td class="center"><sub><strong>Self-rated Skills</strong></sub></td>
-      <td class="center"><sub><strong>GitHub Language Stats</strong></sub></td>
-    </tr>
-  </table>
-
-  <hr>
-
-  <h2>Contribution Snake</h2>
-  <div class="center">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-light.svg">
-      <img src="https://raw.githubusercontent.com/samir-sah/samir-sah/output/snake-dark.svg" width="820" alt="Snake Contribution Graph">
-    </picture>
-  </div>
-
-  <hr>
-
-  <h2>Stats</h2>
-  <div class="center">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
-      <img src="assets/card-stats-dark.svg" alt="GitHub Stats">
-    </picture>
-  </div>
-
-  <hr>
-
-  <h2>Featured Projects</h2>
-  <ul class="featured-projects">
-    <li><a href="https://github.com/samir-sah/business-admin-dashboard"><strong>Business Admin Dashboard</strong></a> — Full-stack admin dashboard with RESTful APIs and a responsive Next.js/Tailwind interface.</li>
-    <li><a href="https://github.com/samir-sah/crm-platform"><strong>CRM Platform</strong></a> — Kanban-based sales pipeline for leads, contacts, notes, and follow-up tasks.</li>
-    <li><a href="https://github.com/samir-sah/mavoix-internship-dashboard"><strong>Mavoix Internship Dashboard</strong></a> — Production dashboard for FIFO inventory, Razorpay payments, and RBAC support tickets.</li>
-    <li><a href="https://github.com/samir-sah/pulsesearch"><strong>PulseSearch</strong></a> — A BM25 search engine built from the ground up to explore information retrieval.</li>
-  </ul>
-
-  <hr>
-  <p class="center"><sub>Generated by <a href="https://github.com/samir-sah/samir-sah">samir-sah/samir-sah</a> · Updated daily via GitHub Actions</sub></p>
-</body>
+      <h2>Connect</h2>
+      <p>
+        <a href="https://samir-sah.vercel.app">Portfolio</a> ·
+        <a href="https://linkedin.com/in/samir-sah-68a8b3329">LinkedIn</a> ·
+        <a href="https://leetcode.com/samir-sah">LeetCode</a> ·
+        <a href="mailto:sahsamir2004@gmail.com">Email</a>
+      </p>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,14 @@
+# Postman
+.postman/
+postman/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.class
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
