@@ -37,13 +37,6 @@ A full-stack admin dashboard for business data and operations, with structured R
 
 A full-stack CRM for leads, contacts, notes, and follow-up tasks, organized around a Kanban-based sales pipeline with JWT authentication.
 
-### Mavoix Internship Dashboard
-
-An internship admin dashboard covering FIFO inventory, Razorpay payments, and an RBAC support-ticket system using Node, Express, MongoDB, and AWS EC2.
-
-### PulseSearch
-
-A BM25 search engine built from the ground up to explore how information retrieval works rather than only calling an API.
 
 ## Activity
 
